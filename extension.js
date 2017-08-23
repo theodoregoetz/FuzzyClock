@@ -46,7 +46,7 @@ FuzzyClock.prototype = {
         let day = now.get_day_of_month();
         let days = GLib.Date.get_days_in_month(month, now.get_year());
         return this.month_fmt[Math.round(4 * (day / days))]
-            .replace("%0", this.month_names[month]);
+            .replace("%0", this.month_names[month - 1]);
     }
 };
 
